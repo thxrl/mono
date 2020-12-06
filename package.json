@@ -1,35 +1,35 @@
 {
-    "name"            : "root",
-    "private"         : true,
-    "workspaces"      : [
+    "name": "root",
+    "private": true,
+    "workspaces": [
         "app/*",
         "lib/*"
     ],
-    "scripts"         : {
-        "scripts:install"       : "cd \"lib/scripts\" && npm install",
-        "scripts:tdd"           : "cd \"lib/scripts\" && npm run tdd",
-        "scripts:watch"         : "cd \"lib/scripts\" && npm run build-watch",
-        "scripts:build"         : "cd \"lib/scripts\" && npm run build",
-        "scripts:publish"       : "cd \"lib/scripts\" && npm publish",
-        "components:build"      : "cd \"lib/components\" && npm run build",
-        "components:watch"      : "cd \"lib/components\" && npm run build-watch",
-        "components:install"    : "cd \"lib/components\" && npm install",
-        "components:publish"    : "cd \"lib/components\" && npm publish",
-        "storybook:watch"       : "cd \"lib/components\" && npm run storybook",
-        "storybook:build"       : "cd \"lib/components\" && npm run build-storybook",
-        "prepush"               : "npm run chores:cleanInstall && npm run chores:build",
-        "chores:clean"          : "lerna clean --yes && rimraf node_modules",
-        "chores:cleanLockfiles" : "rimraf **/package-lock.json",
-        "chores:cleanInstall"   : "npm run chores:clean && npm run chores:install",
-        "chores:install"        : "npm install && lerna bootstrap --hoist",
-        "chores:publish"        : "npm run prepush && lerna publish",
-        "chores:publishFromGit" : "npm run prepush && lerna publish from-git",
-        "chores:publishDanger"  : "lerna publish",
-        "chores:build"          : "npm run scripts:build && npm run components:build && npm run storybook:build",
-        "chores:republish"      : "npm run chores:clean && npm run scripts:install && npm run scripts:publish && npm run components:install && npm run components:publish && npm run chores:cleanInstall"
+    "scripts": {
+        "scripts:install": "cd \"lib/scripts\" && npm install",
+        "scripts:tdd": "cd \"lib/scripts\" && npm run tdd",
+        "scripts:watch": "cd \"lib/scripts\" && npm run build-watch",
+        "scripts:build": "cd \"lib/scripts\" && npm run build",
+        "scripts:publish": "cd \"lib/scripts\" && npm publish",
+        "components:build": "cd \"lib/components\" && npm run build",
+        "components:watch": "cd \"lib/components\" && npm run build-watch",
+        "components:install": "cd \"lib/components\" && npm install",
+        "components:publish": "cd \"lib/components\" && npm publish",
+        "storybook:watch": "cd \"lib/components\" && npm run storybook",
+        "storybook:build": "cd \"lib/components\" && npm run build-storybook",
+        "prepush": "npm run chores:cleanInstall && npm run chores:build",
+        "chores:clean": "lerna clean --yes && rimraf node_modules",
+        "chores:cleanLockfiles": "rimraf **/package-lock.json",
+        "chores:cleanInstall": "npm run chores:clean && npm run chores:install",
+        "chores:install": "npm install && lerna bootstrap --hoist",
+        "chores:publish": "npm run prepush && lerna publish",
+        "chores:publishFromGit": "npm run prepush && lerna publish from-git",
+        "chores:publishDanger": "lerna publish",
+        "chores:build": "npm run scripts:build && npm run components:build && npm run storybook:build",
+        "chores:republish": "npm run chores:clean && npm run scripts:install && npm run scripts:publish && npm run components:install && npm run components:publish && npm run chores:cleanInstall"
     },
-    "devDependencies" : {
-        "lerna"  : "3.22.1",
-        "rimraf" : "3.0.2"
+    "devDependencies": {
+        "lerna": "3.22.1",
+        "rimraf": "3.0.2"
     }
 }

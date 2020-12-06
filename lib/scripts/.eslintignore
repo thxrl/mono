@@ -1,0 +1,5 @@
+/node_modules
+/reactComponentLib
+/API/generated
+/*.config.js
+/*rc*

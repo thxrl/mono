@@ -1,0 +1,17 @@
+
+.DS_STORE
+node_modules
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+*.swp
+*.swo
+
+dist/
+target/
+lerna-debug.log
+yarn.lock
+**/yarn.lock
+node_modules

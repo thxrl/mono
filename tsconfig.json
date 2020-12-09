@@ -4,7 +4,7 @@
     "compilerOptions" : {
         "baseUrl" : ".",
         "paths"   : {
-            "@thxrl/*" : [ "lib/*/src/" ]
+            "@tflndr/*" : [ "lib/*/src/" ]
         }
     }
 }

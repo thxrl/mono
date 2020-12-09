@@ -1,10 +1,18 @@
 {
     "name": "@thxrl/scripts",
-    "version": "0.0.1",
+    "description": "scripts",
+    "version": "1.0.0",
     "main": "dist/index.esm.js",
     "module": "dist/index.esm.js",
+    "typings": "dist/index",
     "license": "MIT",
     "types": "dist/index.d.ts",
+    "author": "tflndr (npmjs.com@mail.flander.de)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/flndr/mono.git",
+        "directory": "lib/scripts"
+    },
     "scripts": {
         "test": "jest",
         "tdd": "jest --watchAll",
@@ -40,13 +48,11 @@
         "@babel/plugin-transform-classes": "7.12.1",
         "@babel/preset-env": "7.12.7",
         "@babel/preset-typescript": "7.12.7",
-        "@rollup/plugin-commonjs": "17.0.0",
+        "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
         "@rollup/plugin-replace": "^2.3.4",
         "@rollup/plugin-typescript": "^8.0.0",
-        "@types/axios": "0.14.0",
-        "@types/deepmerge": "^2.2.0",
         "@types/jest": "^26.0.16",
         "@types/jwt-decode": "^2.2.1",
         "@types/lockr": "^0.8.6",
@@ -60,8 +66,6 @@
         "eslint-plugin-react": "7.21.5",
         "jest": "26.6.3",
         "prepend-file": "2.0.0",
-        "prettier": "2.2.1",
-        "release-it": "14.2.2",
         "rimraf": "3.0.2",
         "rollup": "^2.34.2",
         "rollup-plugin-babel": "4.4.0",
@@ -78,17 +82,21 @@
     },
     "peerDependencies": {
         "axios": "0.21.0",
+        "base64url": "3.0.1",
+        "class-transformer": "0.3.1",
+        "class-validator": "0.12.2",
         "dayjs": "1.9.7",
+        "deepmerge": "4.2.2",
+        "jsonpath-plus": "4.0.0",
+        "jwt-decode": "3.1.2",
         "lockr": "0.8.5",
-        "mobx": "6.0.4"
+        "mobx": "6.0.4",
+        "reflect-metadata": "0.1.13"
     },
     "files": [
         "dist"
     ],
-    "release-it": {
-        "git": {
-            "requireCleanWorkingDir": false,
-            "addUntrackedFiles": true
-        }
+    "publishConfig": {
+        "access": "public"
     }
 }

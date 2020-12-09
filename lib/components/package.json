@@ -1,9 +1,12 @@
 {
   "name": "@thxrl/components",
-  "version": "0.1.0",
-  "main": "dist/index.cjs.js",
+  "version": "1.0.0",
+  "main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
-  "dependencies": {},
+  "typings": "dist/index",
+  "dependencies": {
+      "@thxrl/scripts" : "1.0.0"
+  },
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
@@ -12,6 +15,9 @@
     "storybook-watch": "start-storybook -p 6006 -s public",
     "storybook-build": "build-storybook -s public"
   },
+"files": [
+    "dist"
+],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -61,5 +67,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "^4.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

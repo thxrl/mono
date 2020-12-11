@@ -5,7 +5,10 @@
   "module": "dist/index.esm.js",
   "typings": "dist/index",
   "dependencies": {
-      "@thxrl/scripts" : "1.0.0"
+    "@thxrl/scripts": "1.0.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0"
   },
   "scripts": {
     "build": "rollup -c",
@@ -15,9 +18,9 @@
     "storybook-watch": "start-storybook -p 6006 -s public",
     "storybook-build": "build-storybook -s public"
   },
-"files": [
+  "files": [
     "dist"
-],
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -2,9 +2,9 @@
 import React  from 'react';
 import styled from '@emotion/styled';
 
-export interface FullHeightLayoutProps {
+export interface VerticalSpreadProps {
     top? : React.ReactNode;
-    center : React.ReactNode;
+    center? : React.ReactNode;
     bottom? : React.ReactNode;
 }
 
@@ -21,9 +21,9 @@ const Stretch = styled.div`
 `;
 
 /**
- * Will use 100% height and place a bottom and top slot.
+ * Will use 100% height and place a top, center and bottom slot.
  */
-export const FullHeightLayout = ( props : FullHeightLayoutProps ) => {
+export const VerticalSpread = ( props : VerticalSpreadProps ) => {
     return <Container>
         { props.top && <div>{ props.top }</div> }
         <Stretch>{ props.center }</Stretch>

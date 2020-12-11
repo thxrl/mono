@@ -3,11 +3,11 @@ import { css }  from '@emotion/react';
 import React    from 'react';
 import { Meta } from '@storybook/react';
 
-import { FullHeightLayout } from './FullHeightLayout';
+import { VerticalSpread } from './VerticalSpread';
 
 export default {
-    title     : 'Layout/FullHeightLayout',
-    component : FullHeightLayout,
+    title     : 'Layout/VerticalSpread',
+    component : VerticalSpread,
     argTypes  : {},
 } as Meta;
 
@@ -31,21 +31,26 @@ const Bottom = () => <div css={ css`
 ` }>Bottom</div>;
 
 export const AllSlotsStretched = () => <div style={ { height : '100vh' } }>
-    <FullHeightLayout top={ <Top/> } center={ <Center stretch/> } bottom={ <Bottom/> }/>
+    <VerticalSpread top={ <Top/> } center={ <Center stretch/> } bottom={ <Bottom/> }/>
 </div>;
 
 export const AllSlots = () => <div style={ { height : '100vh' } }>
-    <FullHeightLayout top={ <Top/> } center={ <Center/> } bottom={ <Bottom/> }/>
+    <VerticalSpread top={ <Top/> } center={ <Center/> } bottom={ <Bottom/> }/>
 </div>;
 
 export const NoTop = () => <div style={ { height : '100vh' } }>
-    <FullHeightLayout center={ <Center stretch/> } bottom={ <Bottom/> }/>
+    <VerticalSpread center={ <Center stretch/> } bottom={ <Bottom/> }/>
 </div>;
 
 export const NoBottom = () => <div style={ { height : '100vh' } }>
-    <FullHeightLayout top={ <Top/> } center={ <Center stretch/> }/>
+    <VerticalSpread top={ <Top/> } center={ <Center stretch/> }/>
 </div>;
 
+export const NoCenter = () => <div style={ { height : '100vh' } }>
+    <VerticalSpread top={ <Top/> } bottom={ <Bottom/> }/>
+</div>;
+
+
 export const OnlyCenter = () => <div style={ { height : '100vh' } }>
-    <FullHeightLayout center={ <Center stretch/> }/>
+    <VerticalSpread center={ <Center stretch/> }/>
 </div>;

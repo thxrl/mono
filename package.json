@@ -15,7 +15,7 @@
         "components:watch": "cd \"lib/components\" && npm run build-watch",
         "components:install": "cd \"lib/components\" && npm install",
         "components:publish": "cd \"lib/components\" && npm publish",
-        "storybook:watch": "cd \"lib/components\" && npm run storybook",
+        "storybook:watch": "cd \"lib/components\" && npm run storybook-watch",
         "storybook:build": "cd \"lib/components\" && npm run storybook-build",
         "cra-test:watch": "cd \"app/cra-test\" && npm run watch",
         "cra-test:build": "cd \"app/cra-test\" && npm run build",

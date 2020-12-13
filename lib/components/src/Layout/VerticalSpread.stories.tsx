@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css }  from '@emotion/react';
+import css      from '@emotion/css';
 import React    from 'react';
 import { Meta } from '@storybook/react';
 
@@ -49,7 +48,6 @@ export const NoBottom = () => <div style={ { height : '100vh' } }>
 export const NoCenter = () => <div style={ { height : '100vh' } }>
     <VerticalSpread top={ <Top/> } bottom={ <Bottom/> }/>
 </div>;
-
 
 export const OnlyCenter = () => <div style={ { height : '100vh' } }>
     <VerticalSpread center={ <Center stretch/> }/>

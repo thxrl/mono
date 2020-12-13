@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css }  from '@emotion/react';
+import css  from '@emotion/css';
 import React    from 'react';
 import { Meta } from '@storybook/react';
 

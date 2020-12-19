@@ -1,4 +1,4 @@
-import css  from '@emotion/css';
+import styled   from '@emotion/styled';
 import React    from 'react';
 import { Meta } from '@storybook/react';
 
@@ -10,23 +10,29 @@ export default {
     argTypes  : {},
 } as Meta;
 
-const Left = () => <div css={ css`
+const L = styled.div`
   background-color : darkviolet;
   color            : white;
   padding          : 1rem;
-` }>Left</div>;
+`;
 
-const Center = () => <div css={ css`
+const Left = () => <L>Left</L>;
+
+const C = styled.div`
   background-color : darkcyan;
   color            : white;
   padding          : 1rem;
-` }>Center</div>;
+`;
 
-const Right = () => <div css={ css`
+const Center = () => <C>Center</C>;
+
+const R = styled.div`
   background-color : #3d3d3d;
   color            : white;
   padding          : 1rem;
-` }>Right</div>;
+`;
+
+const Right = () => <R>Right</R>;
 
 export const AllSlots = () => <div>
     <HorizontalSpread left={ <Left/> } center={ <Center/> } right={ <Right/> }/>

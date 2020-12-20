@@ -5,6 +5,7 @@ export interface HorizontalSpreadProps {
     left? : React.ReactNode;
     center? : React.ReactNode;
     right? : React.ReactNode;
+    fullHeight? : boolean;
     align? : 'top' | 'center' | 'bottom';
 }
 
@@ -27,16 +28,22 @@ export const HorizontalSpread = ( props : HorizontalSpreadProps ) => {
       display        : flex;
       flex-direction : row;
       align-items    : ${ alignment };
+      height         : ${ props.fullHeight === true ? '100%' : 'auto' };
     `;
     
     const Stretch = styled.div`
-      flex : 1 0 0;
+      flex   : 1 0 0;
+      height : ${ props.fullHeight === true ? '100%' : 'auto' };
+    `;
+    
+    const D = styled.div`
+      height : ${ props.fullHeight === true ? '100%' : 'auto' };
     `;
     
     return <Container>
-        { props.left && <div>{ props.left }</div> }
+        { props.left && <D>{ props.left }</D> }
         <Stretch>{ props.center }</Stretch>
-        { props.right && <div>{ props.right }</div> }
+        { props.right && <D>{ props.right }</D> }
     </Container>
     
 };
